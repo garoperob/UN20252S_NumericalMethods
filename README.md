@@ -1,2 +1,3 @@
-# UN20252S_NumercialMethods
-Reserva de todos los ejercicios de métodos numéricos
+# Métodos Numéricos: Laboratorios
+
+- [Laboratorio 1] (lab1.md)
