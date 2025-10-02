@@ -1,8 +1,8 @@
 # Métodos Numéricos: Laboratorios
 
 - Laboratorio 1: Solución de ecuaciones no lineales
-    - [Ejercicio 1 Bolzano](/ejercicio1.ipynb)
-    - [Ejercicio 2 Newthon-Raphson]()
+    - [Ejercicio 1 Bolzano](/lab1ex1.ipynb)
+    - [Ejercicio 2 Newthon-Raphson](/lab1ex2.ipynb)
 - Laboratorio 2: Solución de sistemas de ecuaciones lineales
     - [Ejercicio 1 Factorización triangular](/)
     - [Ejercicio 2 Método iterativo de Jacobi](/)
