@@ -7,5 +7,5 @@
     - [Ejercicio 1 Factorización triangular](/lab2ex1.ipynb)
     - [Ejercicio 2 Método iterativo de Jacobi](/lab2ex2.ipynb)
 - Laboratorio 3: Interpolación y aproximación polinomial
-    - [Ejercicio 1 Polinomio interpolador de Lagrange](/)
-    - [Ejercicio 2 Polinomio de Newton en diferencia finitas hacia adelante](/)
+    - [Ejercicio 1 Polinomio interpolador de Lagrange](/lab3ex1.ipynb)
+    - [Ejercicio 2 Polinomio de Newton en diferencia finitas hacia adelante](/lab3ex2.ipynb)
