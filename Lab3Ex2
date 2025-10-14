@@ -1,0 +1,55 @@
+import pandas as pd
+import math
+
+# Datos
+T = [50, 60, 70, 80, 90, 100]
+P = [24.94, 30.11, 36.05, 42.84, 50.57, 59.30]
+puntos = list(range(len(T)))
+
+
+# Tabla inicial
+tabla_inicial = pd.DataFrame({
+    "Puntos": puntos,
+    "T (°F)": T,
+    "P (lb/plg²)": P
+})
+
+print("Tabla original")
+print(tabla_inicial.to_string(index=False))
+
+# Tabla de diferencias finitas hacia adelante
+n = len(P)
+tabla = [P]
+for i in range(1, n):
+    dif = [tabla[i-1][j+1] - tabla[i-1][j] for j in range(len(tabla[i-1]) - 1)]
+    tabla.append(dif)
+
+# Mostrar tabla completa
+df = pd.DataFrame(tabla).T
+df.columns = [f"Δ^{i}P" for i in range(n)]
+
+print("\nTabla de diferencias finitas hacia adelante:\n")
+print(df.round(4).fillna(""))
+
+# Solicitar temperatura para la tabulación
+x = float(input("\nIngrese la temperatura a interpolar (°F): "))
+
+# Parámetros del método
+h = 10
+x0 = T[0]
+s = (x - x0) / h
+
+# Cálculo del polinomio de Newton hacia adelante
+P_interp = P[0]
+fact = 1
+for i in range(1, n):
+    fact *= (s - (i - 1))
+    P_interp += (fact / math.factorial(i)) * tabla[i][0]
+
+print()
+print()
+print(f"Temperatura a interpolar: {x} °F")
+print(f"Valor de s = (x - x0) / h = {s:.4f}")
+print(f"Presión interpolada ≈ {P_interp:.4f} lb/plg²")
+print()
+print("FIN")
